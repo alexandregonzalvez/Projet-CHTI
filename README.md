@@ -6,7 +6,7 @@ On va tracer plusieurs courbes avec les paramètres suivants :
 * Nombre de points d'échantillonage M = 32
 
 #### Tracé des courbes  pour Fsin = 3hz
-
+```Q4```
 ![Figure 1 : Tracé pour 3Hz](/images/plot_3hz.jpg)
 
 Sur le graphe de la transformée de Fourier, on observe 2 pics de fréquence :
@@ -14,7 +14,7 @@ Sur le graphe de la transformée de Fourier, on observe 2 pics de fréquence :
 * 29Hz : M - Fsin
 
 #### Tracé des courbes pour Fsin = 15hz
-
+```Q5```
 ![Figure 2 : Tracé pour 15Hz](/images/plot_15hz.jpg)
 
 Sur le graphe de la transformée de Fourier, on observe 2 pics de fréquence :
@@ -35,7 +35,7 @@ On observe 2 pics:
 Si on ne sait pas que la fréquence du sinus est 29Hz, on déduit du spectre de Fourier que la fréquence est de 3Hz : c'est le phénomène de repliement du spectre.
 
 #### Fsin = 5Hz
-
+```Q6```
 ![Figure 4 : Tracé pour 5Hz](/images/plot_5hz.jpg)
 
 Sur le graphe de la transformée de Fourier, on observe 2 pics de fréquence :
@@ -48,5 +48,7 @@ Rien d'inhabituel par rapport aux derniers tracés.
 
 ![Figure 5 : Tracé pour 5.5Hz](/images/plot_55hz.jpg)
 
+```Q8```
+Ici, 5.5 n'est pas un multiple de T (la fenêtre d'analyse) c'est pour ça qu'on obtient un spectre déformé. Pour régler le problème, il suffit de modifier T pour qu'il soit un multiple de 5.5 (par exemple 0.5).
 
 

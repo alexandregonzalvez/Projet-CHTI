@@ -2,7 +2,7 @@ clear;
 clear all;
 close all;
 % Temps fenêtre d'analyse
-T = 1;
+T = 0.5;
 
 % nb points fft
 M = 32;
