@@ -33,3 +33,20 @@ On observe 2 pics:
 * 29Hz : Fsin
 
 Si on ne sait pas que la fréquence du sinus est 29Hz, on déduit du spectre de Fourier que la fréquence est de 3Hz : c'est le phénomène de repliement du spectre.
+
+#### Fsin = 5Hz
+
+![Figure 4 : Tracé pour 5Hz](/images/plot_5hz.jpg)
+
+Sur le graphe de la transformée de Fourier, on observe 2 pics de fréquence :
+* 5Hz : Fsin
+* 27Hz : M - Fsin
+
+Rien d'inhabituel par rapport aux derniers tracés.
+
+#### Fsin = 5,5Hz
+
+![Figure 5 : Tracé pour 5.5Hz](/images/plot_55hz.jpg)
+
+
+

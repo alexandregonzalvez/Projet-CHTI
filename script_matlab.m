@@ -14,7 +14,7 @@ Te = T/M;
 Tsim = T-Te;
 
 % Fréquence de la sinusoïde (hz)
-Fsin = 29;
+Fsin = 5.5;
 
 SimOut = sim('model_simulink');% Link to Simulink
 
