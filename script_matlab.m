@@ -14,11 +14,26 @@ Te = T/M;
 Tsim = T-Te;
 
 % Fréquence de la sinusoïde (hz)
-Fsin = 3;
+Fsin = 29;
 
 SimOut = sim('model_simulink');% Link to Simulink
 
+subplot(2,2,1);
 plot(SimOut.Tps_Cont, SimOut.Sin_Cont); % Plot Sin_Cont en fonction du temps
+title('Sinusoïde continue');
+xlabel('Temps (s)');
+ylabel('Amplitude');
 
-fourier = fft(SimOut.Sin_Cont);
-%plot(fourier);
+subplot(2,2,2);
+plot(SimOut.Tps_Ech, SimOut.Sin_Ech,"."); 
+title('Sinusoïde discrète');
+xlabel('Temps (s)');
+ylabel('Amplitude');
+
+subplot(2,2,3);
+fourier = fft(SimOut.Sin_Ech);
+f = (0:length(fourier) - 1)*M/length(fourier);
+plot(f, abs(fourier),"*");
+title('Transformée de fourier');
+xlabel('Fréquence (Hz)');
+ylabel('Amplitude');

@@ -1,3 +1,6 @@
+clear;
+clear all;
+close all;
 % Temps fenêtre d'analyse
 T = 1;
 
@@ -5,7 +8,7 @@ T = 1;
 M = 32;
 
 % Période d'échantillonnage
-Te = M/T;
+Te = T/M;
 
 % Temps de simulation
 Tsim = T-Te;
@@ -15,7 +18,17 @@ Fsin = 3;
 
 SimOut = sim('model_simulink');% Link to Simulink
 
+subplot(2,2,1);
 plot(SimOut.Tps_Cont, SimOut.Sin_Cont); % Plot Sin_Cont en fonction du temps
+title('Sinusoïde continue');
+xlabel('Frequency (MHz)');
+ylabel('Transmitted Power  (dBM)');
 
-fourier = fft(SimOut.Sin_Cont);
-%plot(fourier);
+subplot(2,2,2);
+plot(SimOut.Tps_Ech, SimOut.Sin_Ech,"."); 
+title('Sinusoïde ');
+
+subplot(2,2,3);
+fourier = fft(SimOut.Sin_Ech);
+plot(abs(fourier));
+%title('Combine Plots');
