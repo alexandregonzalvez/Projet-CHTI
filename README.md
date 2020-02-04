@@ -51,4 +51,10 @@ Rien d'inhabituel par rapport aux derniers tracés.
 ```Q8```
 Ici, 5.5 n'est pas un multiple de 1/T c'est pour ça qu'on obtient un spectre déformé. Pour régler le problème, il suffit de modifier T pour que 1/T soit un diviseur de 5.5 (par exemple T=2).
 
+Avec T=2:
 
+![Figure 6 : Bon tracé pour 5.5Hz](/images/plot_55hz_good.jpg)
+
+On en conclut qu'il faut impérativement avoir 1/T qui divise Fsin pour avoir une analyse correcte.
+
+Pour la partie Projet, voir PROJET.md

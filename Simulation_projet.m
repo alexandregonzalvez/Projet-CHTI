@@ -2,21 +2,30 @@ clear;
 clear all;
 close all;
 % Temps fenêtre d'analyse
-T = 0.01;
+T = 1/5000;
 
-% nb points fft
-M = 3200;
+%Fréquence d'échantillonage
+Fe=320000;
 
 % Période d'échantillonnage
-Te = T/M;
+Te=1/Fe;
+
+% nb points fft
+M = T/Te;
 
 % Temps de simulation
 Tsim = T-Te;
 
 % Fréquence de la sinusoïde (hz)
-Fsin = 120000;
+F1 = 85005.9;
+F2 = 90000;
+F3 = 94986.8;
+F4 = 100000;
+F5 = 115015.9;
+F6 = 120000;
 
-SimOut = sim('model_simulink');% Link to Simulink
+
+SimOut = sim('simulation_projet');% Link to Simulink
 
 subplot(2,2,1);
 plot(SimOut.Tps_Cont, SimOut.Sin_Cont); % Plot Sin_Cont en fonction du temps
@@ -32,9 +41,8 @@ ylabel('Amplitude');
 
 subplot(2,2,3);
 fourier = fft(SimOut.Sin_Ech);
-f = (0:length(fourier) - 1)*M/length(fourier);
-f=(0:M-1)/T
-plot(f, abs(fourier),"*");
+f=(0:M-1)/T;
+semilogy(f, abs(fourier),"*");
 title('Transformée de fourier');
 xlabel('Fréquence (Hz)');
 ylabel('Amplitude');
