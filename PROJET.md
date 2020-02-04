@@ -33,9 +33,24 @@ En réalité, l'émetteur possède une imprécision sur les canaux suivants :
 
 Quand on trace les courbes, on obtient les résultats suivants :
 
-![Figure 1 : Tracé pour fréquences imparfaites](/images/f_imparfaites.jpg)
+![Figure 2 : Tracé pour fréquences imparfaites](/images/f_imparfaites.jpg)
 
 Comme on peut le voir, le bruit est monté à 10^-1. Ceci est acceptable comme il reste en-dessous de 10^0.
 
+Deuxième source d'erreur : 
+Il se peut que la fenêtre d'analyse de la DFT soit à cheval sur le début d'une salve.
+Dans ce cas la, on obtient le résultat suivant :
 
+![Figure 3 : Tracé pour fenetre decalee](/images/fenetre_decalee.jpg)
+
+On constate que c'est une catastrophe pour isoler le signal des joueurs.
+
+
+En réalité, les signaux issus du pistolet ne sont pas sinusoïdaux mais carrés.
+On trace la DFT d'un signal carré de fréquence 85kHz:
+
+![Figure 3 : Tracé pour signal carre 85kHz](/images/carre_85kHz.jpg)
+
+Comme on peut le voir sur le graphe, on a pleins de pics sur la DFT, ceci est dû au fait qu'un signal carré est composé d'un ensemble de sinusoïdes avec des fréquences différentes.
+On observe sur la DFT l'ensemble de ces fréquences.
 

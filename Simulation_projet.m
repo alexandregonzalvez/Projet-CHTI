@@ -27,6 +27,12 @@ F6 = 120000;
 
 SimOut = sim('simulation_projet');% Link to Simulink
 
+%x = (1:length(SimOut.Sin_Ech)/2);
+%for i=x
+%    SimOut.Sin_Ech(i) = 0;
+%    SimOut.Sin_Cont(i) = 0;
+%end N
+
 subplot(2,2,1);
 plot(SimOut.Tps_Cont, SimOut.Sin_Cont); % Plot Sin_Cont en fonction du temps
 title('Sinusoïde continue');
@@ -42,7 +48,7 @@ ylabel('Amplitude');
 subplot(2,2,3);
 fourier = fft(SimOut.Sin_Ech);
 f=(0:M-1)/T;
-semilogy(f, abs(fourier),"*");
+plot(f, abs(fourier),"*");
 title('Transformée de fourier');
 xlabel('Fréquence (Hz)');
 ylabel('Amplitude');
