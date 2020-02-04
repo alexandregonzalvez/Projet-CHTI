@@ -49,6 +49,6 @@ Rien d'inhabituel par rapport aux derniers tracés.
 ![Figure 5 : Tracé pour 5.5Hz](/images/plot_55hz.jpg)
 
 ```Q8```
-Ici, 5.5 n'est pas un multiple de T (la fenêtre d'analyse) c'est pour ça qu'on obtient un spectre déformé. Pour régler le problème, il suffit de modifier T pour qu'il soit un multiple de 5.5 (par exemple 0.5).
+Ici, 5.5 n'est pas un multiple de 1/T c'est pour ça qu'on obtient un spectre déformé. Pour régler le problème, il suffit de modifier T pour que 1/T soit un diviseur de 5.5 (par exemple T=2).
 
 

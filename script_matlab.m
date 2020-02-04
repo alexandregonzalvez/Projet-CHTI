@@ -2,7 +2,7 @@ clear;
 clear all;
 close all;
 % Temps fenêtre d'analyse
-T = 0.5;
+T = 2;
 
 % nb points fft
 M = 32;
@@ -33,6 +33,7 @@ ylabel('Amplitude');
 subplot(2,2,3);
 fourier = fft(SimOut.Sin_Ech);
 f = (0:length(fourier) - 1)*M/length(fourier);
+f=(0:M-1)/T
 plot(f, abs(fourier),"*");
 title('Transformée de fourier');
 xlabel('Fréquence (Hz)');
