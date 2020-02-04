@@ -51,6 +51,5 @@ On trace la DFT d'un signal carré de fréquence 85kHz:
 
 ![Figure 3 : Tracé pour signal carre 85kHz](/images/carre_85kHz.jpg)
 
-Comme on peut le voir sur le graphe, on a pleins de pics sur la DFT, ceci est dû au fait qu'un signal carré est composé d'un ensemble de sinusoïdes avec des fréquences différentes.
-On observe sur la DFT l'ensemble de ces fréquences.
-
+Comme on peut le voir sur le graphe, on a pleins de pics sur la DFT, ceci est dû au fait que la DFT d'un signal carré sort la fréquence du fondamental et de ses harmoniques impaires en décroissant hyperboliquement.
+On observe sur la DFT l'ensemble de ces fréquences ainsi que celles dues au repliement.
