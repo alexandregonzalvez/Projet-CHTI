@@ -53,3 +53,33 @@ On trace la DFT d'un signal carré de fréquence 85kHz:
 
 Comme on peut le voir sur le graphe, on a pleins de pics sur la DFT, ceci est dû au fait que la DFT d'un signal carré sort la fréquence du fondamental et de ses harmoniques impaires en décroissant hyperboliquement.
 On observe sur la DFT l'ensemble de ces fréquences ainsi que celles dues au repliement.
+
+On propose de placer en amont un filtre. Son rôle est de contourner le problème relevé précédemment. 
+On souhaite utiliser un filtre passe-bas pour éliminer les harmoniques indésirables dues au signal carré.
+
+![Figure 4 : Tracé Bode (Chebychev)](/images/Chebychev.PNG)
+Comme on peut le voir sur le diagramme ci-dessus, le gain pour la première harmonique indésirable (le pire des cas, car la plus basse fréquence indésirable de tous les joueurs) a un gain de -50 dB
+
+![Figure 5 : Signal en sortie du filtre (Chebychev)](/images/sortieFiltre.jpg)
+On voit bien que le signal en sortie est sinusoïdal. L'enveloppe du signal varie un peu au début : c'est le régime transitoire (il serait préférable de ne pas observer les premières périodes)
+
+## Partie Electronique
+```Q1```
+Pour F1(p), on trouve :
+*fn1=53,122kHz
+*m1=0.46
+
+Pour F2(p), on trouve :
+*fn2=114,031kHz
+*m2=0.09
+
+Tracer du Bode à faire
+
+```Q4```
+L1=220uH
+R1=
+C1=
+
+L2=1mH
+R2=
+C2=

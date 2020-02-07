@@ -48,7 +48,12 @@ ylabel('Amplitude');
 subplot(2,2,3);
 fourier = fft(SimOut.Sin_Ech);
 f=(0:M-1)/T;
-plot(f, abs(fourier),"*");
+semilogy(f, abs(fourier),"*");
 title('Transformée de fourier');
 xlabel('Fréquence (Hz)');
 ylabel('Amplitude');
+
+%Fonction de transfert (filtre de Chebychev)
+subplot(2,2,4);
+filtre = tf(1,[1.7483*(10^-23) 7.6663*(10^-18) 1.162*(10^-11) 3.0332*(10^-6) 1]);
+bode(filtre)
