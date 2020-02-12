@@ -79,10 +79,13 @@ Voici les diagrammes de bode de ces deux filtres dans l'ordre :
 
 
 ```Q4```
+#### F1 :
 * L1=220uH
 * R1= 
 * C1= 
 
+
+#### F2 :
 * L2=1mH
 * R2= 
 * C2= 
