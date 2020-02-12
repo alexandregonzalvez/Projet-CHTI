@@ -96,3 +96,10 @@ On cable ces deux filtre sur la breadboard et on relève des valeurs afin de tra
 Voici le diagramme obtenu :
 
 ![Figure 7 : Tracé bode expérimental](/images/gain_experimental_filtres.PNG)
+
+On peut voir que le filtre fonctionne comme attendu.
+
+Pour convertir le courant généré par la photodiode lorsqu'elle est soumise à un laser en tension, nous utiliserons un montage AOP dit "transimpédance".
+
+On détermine la valeur de la résistance de ce montage :
+* R = 364 ohm	->	390 ohm
