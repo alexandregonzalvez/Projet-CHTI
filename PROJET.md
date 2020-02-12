@@ -66,20 +66,23 @@ On voit bien que le signal en sortie est sinusoïdal. L'enveloppe du signal vari
 ## Partie Electronique
 ```Q1```
 Pour F1(p), on trouve :
-*fn1=53,122kHz
-*m1=0.46
+* fn1=53,122kHz
+* m1=0.46
 
 Pour F2(p), on trouve :
-*fn2=114,031kHz
-*m2=0.09
+* fn2=114,031kHz
+* m2=0.09
 
-Tracer du Bode à faire
+Voici les diagrammes de bode de ces deux filtres dans l'ordre :
+
+![Figure 6 : Tracé bode](/images/trace_bode_filtres.jpg)
+
 
 ```Q4```
 L1=220uH
-R1=
-C1=
+R1= 
+C1= 
 
 L2=1mH
-R2=
-C2=
+R2= 
+C2= 
