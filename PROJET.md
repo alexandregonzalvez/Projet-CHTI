@@ -79,13 +79,20 @@ Voici les diagrammes de bode de ces deux filtres dans l'ordre :
 
 
 ```Q4```
+Valeur théorique->	Valeur expérimentale
+
 #### F1 :
-* L1=220uH
-* R1= 
-* C1= 
+* L1 = 220 uH	->	220 uH
+* R1 = 68 Ohm	->	47 Ohm
+* C1 = 40 nF	->	39 nF
 
 
 #### F2 :
-* L2=1mH
-* R2= 
-* C2= 
+* L2 = 1 mH		->	1 mH
+* R2 = 125 Ohm	->	120 ohm
+* C2 = 2 nF		->	2.2 nF
+
+On cable ces deux filtre sur la breadboard et on relève des valeurs afin de tracer un diagramme de bode du filtre réel.
+Voici le diagramme obtenu :
+
+![Figure 7 : Tracé bode expérimental](/images/gain_experimental_filtres.PNG)
