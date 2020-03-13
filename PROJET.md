@@ -54,22 +54,22 @@ On trace la DFT d'un signal carré de fréquence 85kHz:
 Comme on peut le voir sur le graphe, on a pleins de pics sur la DFT, ceci est dû au fait que la DFT d'un signal carré sort la fréquence du fondamental et de ses harmoniques impaires en décroissant hyperboliquement.
 On observe sur la DFT l'ensemble de ces fréquences ainsi que celles dues au repliement.
 
-On propose de placer en amont un filtre. Son rôle est de contourner le problème relevé précédemment. 
-On souhaite utiliser un filtre passe-bas pour éliminer les harmoniques indésirables dues au signal carré.
+On propose de placer en amont un filtre. Son rôle est de contourner le problème relevé précédemment c'est-à-dire de supprimer les harmoniques indésirables dues à la DFT du signal carré pour ne conserver que la fréquence fondamentale (filtre anti-repliement).
+Ce filtre sera passe-bas d'ordre 4.
 
 ![Figure 4 : Tracé Bode (Chebychev)](/images/Chebychev.PNG)
-Comme on peut le voir sur le diagramme ci-dessus, le gain pour la première harmonique indésirable (le pire des cas, car la plus basse fréquence indésirable de tous les joueurs) a un gain de -50 dB
+Comme on peut le voir sur le diagramme ci-dessus, le gain pour la première harmonique indésirable (le pire des cas, car la plus basse fréquence indésirable de tous les joueurs) a un gain de -50 dB, ce qui est suffisant pour l'utilisation du signal que l'on souhaite faire.
 
 ![Figure 5 : Signal en sortie du filtre (Chebychev)](/images/sortieFiltre.jpg)
-On voit bien que le signal en sortie est sinusoïdal. L'enveloppe du signal varie un peu au début : c'est le régime transitoire (il serait préférable de ne pas observer les premières périodes)
+On voit bien que le signal en sortie du filtre est sinusoïdal. L'enveloppe du signal varie un peu au début : c'est le régime transitoire (il serait préférable de ne pas observer les premières périodes)
 
 ## Partie Electronique
-```Q1```
-Pour F1(p), on trouve :
+Pour implémenter ce filtre passe-bas d'ordre 4, on va le diviser en 2 filtres passe-bas d'ordre 2 en série dont les fonctions de transfert ont les caractéristiques suivantes : 
+Pour F1(p), on a :
 * fn1=53,122kHz
 * m1=0.46
 
-Pour F2(p), on trouve :
+Pour F2(p), on a :
 * fn2=114,031kHz
 * m2=0.09
 
@@ -77,9 +77,9 @@ Voici les diagrammes de bode de ces deux filtres dans l'ordre :
 
 ![Figure 6 : Tracé bode](/images/trace_bode_filtres.jpg)
 
+On va maintenant déterminer les valeurs des composants des circuits RLC pour ces deux filtres d'ordre 2 afin d'obtenir les bonne caractéristiques (fréquence de coupure et facteur d'amortissement).
 
-```Q4```
-Valeur théorique->	Valeur expérimentale
+Valeur théorique->	Valeur réelle
 
 #### F1 :
 * L1 = 220 uH	->	220 uH
@@ -97,9 +97,9 @@ Voici le diagramme obtenu :
 
 ![Figure 7 : Tracé bode expérimental](/images/gain_experimental_filtres.PNG)
 
-On peut voir que le filtre fonctionne comme attendu.
+On peut voir que le filtre fonctionne comme attendu (2 fréquences de coupures avec résonnance car facteur d'amortissement faible pour les 2 filtres).
 
-Pour convertir le courant généré par la photodiode lorsqu'elle est soumise à un laser en tension, nous utiliserons un montage AOP dit "transimpédance".
+Pour convertir le courant généré par la photodiode lorsqu'elle est soumise à un laser en tension, nous utiliserons un montage AOP dit "transimpédance" qui transforme le courant en tension, qui est une grandeur bien plus pratique à manipuler dans ce genre de circuits électronique.
 
 On détermine la valeur de la résistance de ce montage :
 * R = 364 ohm	->	390 ohm
