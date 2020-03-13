@@ -65,6 +65,7 @@ On voit bien que le signal en sortie du filtre est sinusoïdal. L'enveloppe du s
 
 ## Partie Electronique
 Pour implémenter ce filtre passe-bas d'ordre 4, on va le diviser en 2 filtres passe-bas d'ordre 2 en série dont les fonctions de transfert ont les caractéristiques suivantes : 
+
 Pour F1(p), on a :
 * fn1=53,122kHz
 * m1=0.46
@@ -77,7 +78,7 @@ Voici les diagrammes de bode de ces deux filtres dans l'ordre :
 
 ![Figure 6 : Tracé bode](/images/trace_bode_filtres.jpg)
 
-On va maintenant déterminer les valeurs des composants des circuits RLC pour ces deux filtres d'ordre 2 afin d'obtenir les bonne caractéristiques (fréquence de coupure et facteur d'amortissement).
+On va maintenant déterminer les valeurs des composants des circuits RLC pour ces deux filtres d'ordre 2 afin d'obtenir les bonnes caractéristiques (fréquence de coupure et facteur d'amortissement).
 
 Valeur théorique->	Valeur réelle
 
@@ -92,7 +93,7 @@ Valeur théorique->	Valeur réelle
 * R2 = 125 Ohm	->	120 ohm
 * C2 = 2 nF		->	2.2 nF
 
-On cable ces deux filtre sur la breadboard et on relève des valeurs afin de tracer un diagramme de bode du filtre réel.
+On câble ces deux filtre sur la breadboard et on relève des valeurs afin de tracer un diagramme de bode du filtre réel.
 Voici le diagramme obtenu :
 
 ![Figure 7 : Tracé bode expérimental](/images/gain_experimental_filtres.PNG)
