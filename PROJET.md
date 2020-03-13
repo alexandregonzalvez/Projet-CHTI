@@ -54,7 +54,7 @@ On trace la DFT d'un signal carré de fréquence 85kHz:
 Comme on peut le voir sur le graphe, on a pleins de pics sur la DFT, ceci est dû au fait que la DFT d'un signal carré sort la fréquence du fondamental et de ses harmoniques impaires en décroissant hyperboliquement.
 On observe sur la DFT l'ensemble de ces fréquences ainsi que celles dues au repliement.
 
-On propose de placer en amont un filtre. Son rôle est de contourner le problème relevé précédemment c'est-à-dire de supprimer les harmoniques indésirables dues à la DFT du signal carré pour ne conserver que la fréquence fondamentale (filtre anti-repliement).
+On propose de placer en amont un filtre. Son rôle est de contourner le problème relevé précédemment c'est-à-dire de supprimer les harmoniques indésirables dues à la DFT du signal carré pour ne conserver que la fréquence fondamentale et également d'éviter le phénomène de repliement du spectre (filtre anti-repliement).
 Ce filtre sera passe-bas d'ordre 4.
 
 ![Figure 4 : Tracé Bode (Chebychev)](/images/Chebychev.PNG)
@@ -99,7 +99,31 @@ Voici le diagramme obtenu :
 
 On peut voir que le filtre fonctionne comme attendu (2 fréquences de coupures avec résonnance car facteur d'amortissement faible pour les 2 filtres).
 
-Pour convertir le courant généré par la photodiode lorsqu'elle est soumise à un laser en tension, nous utiliserons un montage AOP dit "transimpédance" qui transforme le courant en tension, qui est une grandeur bien plus pratique à manipuler dans ce genre de circuits électronique.
+Pour convertir le courant généré par la photodiode lorsqu'elle est soumise à un laser en tension, nous utiliserons un montage AOP dit "transimpédance" qui transforme le courant en tension, qui est une grandeur bien plus pratique à manipuler dans ce genre de circuit électronique.
 
-On détermine la valeur de la résistance de ce montage :
+### Schéma du montage transimpédance :
+![Figure 8 : Montage Transimpédance](/images/Transimpédance.PNG)
+
+On détermine la valeur de la résistance de ce montage pour avoir une tension de sortie aux alentours des 200 mV pic à pic:
 * R = 364 ohm	->	390 ohm
+
+Maintenant que le signal de la photodiode est récupéré sous forme de sinusoïde grâce au montage transimpédance et au filtre, il faut l'ajuster pour qu'il soit centré sur 1,65 V afin d'être sûr qu'il soit positif pour l'entrée dans le micro-contrôleur qui effectuera la DFT.
+Cette fonction sera réalisée par un ensemble de 2 montages : un premier qui supprimera la composante continue du signal pour le centrer sur 0 V et un second qui ajoutera un offset de 1,65 V. 
+
+Ce montage peut être réalisé de la façon suivante : 
+![Figure 9 : Montage Offset](/images/montage_offset.PNG)
+
+En appliquant le théorème de superposition, on peut isoler ces deux montages ici combinés en un seul qui sont un filtre passe haut (pour supprimer la composante continue) et un pont diviseur de tension pour ajouter l'offset de 1,65V.
+Les valeurs des composants sont donc déterminées en fonction de ces caractéristiques :
+* On veut une fréquence de coupure de 20 kHz pour le filtre passe-haut
+* On veut une tension de sortie de 1,65 V pour le pont diviseur de tension
+
+On choisit d'abord la valeur de R2 arbitrairement puis on détermine les valeurs des autres composants : 
+* R2 = 4,7 kohm
+* R1 = 20,955 kohm  -> 22 kohm
+* C = 2,05 nF       -> 2,2 nF
+
+Le signal de sortie peut maintenant être envoyé dans le microcontroleur dans lequel il sera traité.
+
+En résumé, voici le diagramme du montage complet :
+![Figure 10 : Diagramme](/images/Diagramme.PNG)
