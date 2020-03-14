@@ -1,4 +1,6 @@
 # Projet CHTI
+
+test
 ## Partie Signal
 
 Chacun des 6 pistolets va émettre une onde sinusoïdale pendant un temps maximal de 100ms, à une fréquence bien déterminée. La discrimination de chacun des 6 faisceaux va se faire par une DFT pour chacune
