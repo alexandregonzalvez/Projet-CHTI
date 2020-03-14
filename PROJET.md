@@ -5,9 +5,9 @@ Cette première partie traitera de cette identification.
 
 Plusieurs problématiques apparaissent :
 
-Comment éviter une confusion à cause du repliement des spectres de chaque signaux ?
-Comment traiter le courant en sortie de la photodiode ?  
-Comment éviter d'avoir une tension négative en entrée du micro-controleur ? 
+* Comment éviter une confusion à cause du repliement des spectres de chaque signaux ?
+* Comment traiter le courant en sortie de la photodiode ?  
+* Comment éviter d'avoir une tension négative en entrée du micro-controleur ? 
 
 ## Partie Signal
 
