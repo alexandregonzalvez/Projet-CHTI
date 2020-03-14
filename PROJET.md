@@ -1,6 +1,14 @@
 # Projet CHTI
 
-test
+Ce projet à pour but de créer un jeu de tir avec des pistolets laser sur différentes cibles. Il y a jusqu'à 4 joueurs, il faut donc pouvoir identifier les différents signaux provenant des pistolets sur les photodiodes.
+Cette première partie traitera de cette identification.
+
+Plusieurs problématiques apparaissent :
+
+Comment éviter une confusion à cause du repliement des spectres de chaque signaux ?
+Comment traiter le courant en sortie de la photodiode ?  
+Comment éviter d'avoir une tension négative en entrée du micro-controleur ? 
+
 ## Partie Signal
 
 Chacun des 6 pistolets va émettre une onde sinusoïdale pendant un temps maximal de 100ms, à une fréquence bien déterminée. La discrimination de chacun des 6 faisceaux va se faire par une DFT pour chacune
