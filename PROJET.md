@@ -1,11 +1,11 @@
 # Projet CHTI
 
-Ce projet à pour but de créer un jeu de tir avec des pistolets laser sur différentes cibles. Il y a jusqu'à 4 joueurs, il faut donc pouvoir identifier les différents signaux provenant des pistolets sur les photodiodes.
+Ce projet à pour but de créer un jeu de tir avec des pistolets laser sur différentes cibles. Il y a jusqu'à 6 joueurs, il faut donc pouvoir identifier les différents signaux provenant des pistolets sur les photodiodes.
 On traitera ici de cette identification.
 
 Plusieurs problématiques apparaissent :
 
-* Comment éviter une confusion à cause du repliement des spectres de chaque signaux ?
+* Comment isoler la fréquence de chaque joueur malgré le repliement des spectres des signaux ?
 * Comment traiter le courant en sortie de la photodiode ?  
 * Comment éviter d'avoir une tension négative en entrée du micro-controleur ? 
 
@@ -138,5 +138,5 @@ On choisit d'abord la valeur de R2 arbitrairement puis on détermine les valeurs
 
 Le signal de sortie peut maintenant être envoyé dans le microcontroleur dans lequel il sera traité.
 
-En résumé, voici le diagramme du montage complet :
+En résumé, voici le diagramme du montage complet (des suiveurs ont été intercalés entre certains montage pour éviter des perturbations d'un montage sur l'autre):
 ![Figure 10 : Diagramme](/images/Diagramme.PNG)
