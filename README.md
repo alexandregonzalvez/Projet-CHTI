@@ -1,4 +1,4 @@
-# Projet CHTI
+# Projet CHTI GONZALVEZ / DECHAMBE
 ## Partie 1 : Prise en main de Matlab / Simulink
 
 On va tracer plusieurs courbes avec les paramètres suivants :
