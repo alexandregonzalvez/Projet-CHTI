@@ -6,26 +6,39 @@ ARM Macro Assembler    Page 1
 
     1 00000000                 thumb
     2 00000000                 area             moncode, code, readonly
-    3 00000000                 export           timer_callback
-    4 00000000         
-    5 00000000         timer_callback
-                               proc
-    6 00000000 40010C10 
+    3 00000000         
+    4 00000000 40010C10 
                        GPIOB_BSRR
                                equ              0x40010C10  ; Bit Set/Reset reg
                                                             ister
-    7 00000000         ; mise a 1 de PB1
-    8 00000000 4B03            ldr              r3, =GPIOB_BSRR
-    9 00000002 F04F 0102       mov              r1, #0x00000002
-   10 00000006 6019            str              r1, [r3]
-   11 00000008         ; mise a zero de PB1
-   12 00000008 4B01            ldr              r3, =GPIOB_BSRR
-   13 0000000A F44F 3100       mov              r1, #0x00020000
-   14 0000000E 6019            str              r1, [r3]
-   15 00000010         ; N.B. le registre BSRR est write-only, on ne peut pas l
-                       e relire
-   16 00000010                 endp
-   17 00000010                 end
+    5 00000000                 extern           current_value
+    6 00000000                 export           timer_callback
+    7 00000000         
+    8 00000000         timer_callback
+                               proc
+    9 00000000 4A08            ldr              r2, =current_value
+   10 00000002 6810            ldr              r0, [r2]
+   11 00000004 4B08            ldr              r3, =GPIOB_BSRR
+   12 00000006 B930            cbnz             r0, zero
+   13 00000008         
+   14 00000008         ; mise a 1 de PB1
+   15 00000008 F04F 0102       mov              r1, #0x00000002
+   16 0000000C 6019            str              r1, [r3]
+   17 0000000E F04F 0101       mov              r1, #1
+   18 00000012 6011            str              r1,  [r2]
+   19 00000014 4770            bx               lr
+   20 00000016         
+   21 00000016         ; mise a 0 de PB1
+   22 00000016 F44F 3100 
+                       zero    mov              r1, #0x00020000
+   23 0000001A 6019            str              r1, [r3]
+   24 0000001C F04F 0100       mov              r1, #0
+   25 00000020 6011            str              r1,  [r2]
+   26 00000022 4770            bx               lr
+   27 00000024         
+   28 00000024                 endp
+   29 00000024                 end
+              00000000 
               40010C10 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
 ork --depend=.\obj\carre.d -o.\obj\carre.o -I.\RTE\_Simu -IC:\Users\Mathieu\App
@@ -52,11 +65,19 @@ timer_callback 00000000
 
 Symbol: timer_callback
    Definitions
-      At line 5 in file Src\Carre.s
+      At line 8 in file Src\Carre.s
    Uses
-      At line 3 in file Src\Carre.s
+      At line 6 in file Src\Carre.s
 Comment: timer_callback used once
-2 symbols
+zero 00000016
+
+Symbol: zero
+   Definitions
+      At line 22 in file Src\Carre.s
+   Uses
+      At line 12 in file Src\Carre.s
+Comment: zero used once
+3 symbols
 
 
 
@@ -67,10 +88,24 @@ GPIOB_BSRR 40010C10
 
 Symbol: GPIOB_BSRR
    Definitions
-      At line 6 in file Src\Carre.s
+      At line 4 in file Src\Carre.s
    Uses
-      At line 8 in file Src\Carre.s
-      At line 12 in file Src\Carre.s
-
+      At line 11 in file Src\Carre.s
+Comment: GPIOB_BSRR used once
 1 symbol
-340 symbols in table
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+External symbols
+
+current_value 00000000
+
+Symbol: current_value
+   Definitions
+      At line 5 in file Src\Carre.s
+   Uses
+      At line 9 in file Src\Carre.s
+Comment: current_value used once
+1 symbol
+342 symbols in table

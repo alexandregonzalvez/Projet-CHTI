@@ -1,10 +1,13 @@
 #include "gassp72.h"
 
+void timer_callback(void);
+u32 Periode_en_Tck = 100;
+u32 current_value = 0;
+
 
 int main(void)
 {
-	extern void *timer_callback;
-	u32 Periode_en_Tck = 10;
+
 	// activation de la PLL qui multiplie la fréquence du quartz par 9
 	CLOCK_Configure();
 	// config port PB1 pour être utilisé en sortie
