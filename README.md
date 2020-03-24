@@ -1,4 +1,5 @@
 # Projet CHTI GONZALVEZ / DECHAMBE
+Pour la partie Projet, voir PROJET.md
 ## Partie 1 : Prise en main de Matlab / Simulink
 
 On va tracer plusieurs courbes avec les paramètres suivants :
@@ -57,4 +58,4 @@ Avec T=2:
 
 On en conclut qu'il faut impérativement avoir 1/T qui divise Fsin pour avoir une analyse correcte.
 
-Pour la partie Projet, voir PROJET.md
+
