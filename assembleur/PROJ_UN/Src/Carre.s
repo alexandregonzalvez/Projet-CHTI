@@ -19,12 +19,12 @@ timer_callback	proc
 	bx	lr
     	
 ; mise a 0 de PB1
-zero	mov	r1, #0x00020000
-		str	r1, [r3]
-		mov	r1, #0
-		str	r1,  [r2]
-		bx	lr
+	mov	r1, #0x00020000
+	str	r1, [r3]
+	mov	r1, #0
+	str	r1,  [r2]
+	bx	lr
 
-    	endp	
-    	end
+    endp	
+    end
 ; N.B. le registre BSRR est write-only, on ne peut pas le relire
