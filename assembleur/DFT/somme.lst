@@ -11,22 +11,20 @@ ARM Macro Assembler    Page 1
     5 00000000                 extern           TabCos
     6 00000000         
     7 00000000         somme   proc
-    8 00000000 4A07            ldr              r2, =TabSin
-    9 00000002 4B08            ldr              r3, =TabCos
-   10 00000004 F04F 0102       mov              r1, #2
-   11 00000008 FB00 F401       mul              r4, r0, r1
-   12 0000000C         
-   13 0000000C 5915            ldr              r5, [r2, r4]
-   14 0000000E 591E            ldr              r6, [r3, r4]
-   15 00000010         
-   16 00000010 FB05 F405       mul              r4, r5, r5
-   17 00000014 FB06 F506       mul              r5, r6, r6
+    8 00000000 4A06            ldr              r2, =TabSin
+    9 00000002 4B07            ldr              r3, =TabCos
+   10 00000004         
+   11 00000004 F932 5010       ldrsh            r5, [r2, r0, lsl #1]
+   12 00000008 F933 6010       ldrsh            r6, [r3, r0, lsl #1]
+   13 0000000C         
+   14 0000000C FB05 F405       mul              r4, r5, r5
+   15 00000010 FB06 F506       mul              r5, r6, r6
+   16 00000014         
+   17 00000014 EB04 0005       add              r0, r4, r5
    18 00000018         
-   19 00000018 EB04 0005       add              r0, r4, r5
-   20 0000001C         
-   21 0000001C 4770            bx               lr
-   22 0000001E                 endp
-   23 0000001E                 end
+   19 00000018 4770            bx               lr
+   20 0000001A                 endp
+   21 0000001A                 end
               00 00 00000000 
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw

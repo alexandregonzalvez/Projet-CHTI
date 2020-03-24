@@ -89,12 +89,12 @@ Image Symbol Table
     .text                                    0x08000160   Section       20  cfrcmple.o(.text)
     .text                                    0x08000174   Section        0  iusefp.o(.text)
     .text                                    0x08000174   Section       36  init.o(.text)
-    code_somme                               0x08000198   Section       40  somme.o(code_somme)
-    i.__scatterload_copy                     0x080001c0   Section       14  handlers.o(i.__scatterload_copy)
-    i.__scatterload_null                     0x080001ce   Section        2  handlers.o(i.__scatterload_null)
-    i.__scatterload_zeroinit                 0x080001d0   Section       14  handlers.o(i.__scatterload_zeroinit)
-    i.main                                   0x080001e0   Section        0  principal.o(i.main)
-    Trigo                                    0x08000228   Section      256  table_trigo.o(Trigo)
+    code_somme                               0x08000198   Section       36  somme.o(code_somme)
+    i.__scatterload_copy                     0x080001bc   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x080001ca   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x080001cc   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i.main                                   0x080001dc   Section        0  principal.o(i.main)
+    Trigo                                    0x08000224   Section      256  table_trigo.o(Trigo)
     STACK                                    0x20000000   Section     1024  startup-rvds.o(STACK)
 
     Global Symbols
@@ -180,15 +180,15 @@ Image Symbol Table
     __I$use$fp                               0x08000175   Thumb Code     0  iusefp.o(.text)
     __scatterload                            0x08000175   Thumb Code    28  init.o(.text)
     __scatterload_rt2                        0x08000175   Thumb Code     0  init.o(.text)
-    somme                                    0x08000199   Thumb Code    30  somme.o(code_somme)
-    __scatterload_copy                       0x080001c1   Thumb Code    14  handlers.o(i.__scatterload_copy)
-    __scatterload_null                       0x080001cf   Thumb Code     2  handlers.o(i.__scatterload_null)
-    __scatterload_zeroinit                   0x080001d1   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
-    main                                     0x080001e1   Thumb Code    52  principal.o(i.main)
-    Region$$Table$$Base                      0x08000218   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x08000228   Number         0  anon$$obj.o(Region$$Table)
-    TabCos                                   0x08000228   Data           0  table_trigo.o(Trigo)
-    TabSin                                   0x080002a8   Data           0  table_trigo.o(Trigo)
+    somme                                    0x08000199   Thumb Code    26  somme.o(code_somme)
+    __scatterload_copy                       0x080001bd   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x080001cb   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x080001cd   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    main                                     0x080001dd   Thumb Code    52  principal.o(i.main)
+    Region$$Table$$Base                      0x08000214   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08000224   Number         0  anon$$obj.o(Region$$Table)
+    TabCos                                   0x08000224   Data           0  table_trigo.o(Trigo)
+    TabSin                                   0x080002a4   Data           0  table_trigo.o(Trigo)
     __initial_sp                             0x20000400   Data           0  startup-rvds.o(STACK)
 
 
@@ -199,9 +199,9 @@ Memory Map of the image
 
   Image Entry point : 0x080000ed
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00000328, Max: 0x00020000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00000324, Max: 0x00020000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00000328, Max: 0x00020000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00000324, Max: 0x00020000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -220,17 +220,17 @@ Memory Map of the image
     0x08000160   0x08000160   0x00000014   Code   RO           74    .text               mf_w.l(cfrcmple.o)
     0x08000174   0x08000174   0x00000000   Code   RO           90    .text               mc_w.l(iusefp.o)
     0x08000174   0x08000174   0x00000024   Code   RO           91    .text               mc_w.l(init.o)
-    0x08000198   0x08000198   0x00000028   Code   RO           58    code_somme          somme.o
-    0x080001c0   0x080001c0   0x0000000e   Code   RO           95    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x080001ce   0x080001ce   0x00000002   Code   RO           96    i.__scatterload_null  mc_w.l(handlers.o)
-    0x080001d0   0x080001d0   0x0000000e   Code   RO           97    i.__scatterload_zeroinit  mc_w.l(handlers.o)
-    0x080001de   0x080001de   0x00000002   PAD
-    0x080001e0   0x080001e0   0x00000038   Code   RO            4    i.main              principal.o
-    0x08000218   0x08000218   0x00000010   Data   RO           93    Region$$Table       anon$$obj.o
-    0x08000228   0x08000228   0x00000100   Data   RO           57    Trigo               table_trigo.o
+    0x08000198   0x08000198   0x00000024   Code   RO           58    code_somme          somme.o
+    0x080001bc   0x080001bc   0x0000000e   Code   RO           95    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x080001ca   0x080001ca   0x00000002   Code   RO           96    i.__scatterload_null  mc_w.l(handlers.o)
+    0x080001cc   0x080001cc   0x0000000e   Code   RO           97    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x080001da   0x080001da   0x00000002   PAD
+    0x080001dc   0x080001dc   0x00000038   Code   RO            4    i.main              principal.o
+    0x08000214   0x08000214   0x00000010   Data   RO           93    Region$$Table       anon$$obj.o
+    0x08000224   0x08000224   0x00000100   Data   RO           57    Trigo               table_trigo.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08000328, Size: 0x00000400, Max: 0x00005000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08000324, Size: 0x00000400, Max: 0x00005000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -245,12 +245,12 @@ Image component sizes
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
         56          4          0          0          0       2091   principal.o
-        40         10          0          0          0        308   somme.o
+        36         10          0          0          0        308   somme.o
         76         20        236          0       1024        808   startup-rvds.o
          0          0        256          0          0          0   table_trigo.o
 
     ----------------------------------------------------------------------
-       172         34        508          0       1024       3207   Object Totals
+       168         34        508          0       1024       3207   Object Totals
          0          0         16          0          0          0   (incl. Generated)
          0          0          0          0          0          0   (incl. Padding)
 
@@ -293,15 +293,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-       300         50        508          0       1024       3407   Grand Totals
-       300         50        508          0       1024       3407   ELF Image Totals
-       300         50        508          0          0          0   ROM Totals
+       296         50        508          0       1024       3407   Grand Totals
+       296         50        508          0       1024       3407   ELF Image Totals
+       296         50        508          0          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                  808 (   0.79kB)
+    Total RO  Size (Code + RO Data)                  804 (   0.79kB)
     Total RW  Size (RW Data + ZI Data)              1024 (   1.00kB)
-    Total ROM Size (Code + RO Data + RW Data)        808 (   0.79kB)
+    Total ROM Size (Code + RO Data + RW Data)        804 (   0.79kB)
 
 ==============================================================================
 

@@ -7,11 +7,9 @@
 somme proc
 	ldr r2, =TabSin
 	ldr r3, =TabCos
-	mov r1, #2
-	mul r4, r0, r1
 	
-	ldr r5, [r2, r4]
-	ldr r6, [r3, r4]
+	ldrsh r5, [r2, r0, lsl #1]
+	ldrsh r6, [r3, r0, lsl #1]
 	
 	mul r4, r5, r5
 	mul r5, r6, r6
