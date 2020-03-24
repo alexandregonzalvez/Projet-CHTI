@@ -1,4 +1,4 @@
-# Projet CHTI
+# Projet CHTI GONZALVEZ / DECHAMBE
 
 Ce projet à pour but de créer un jeu de tir avec des pistolets laser sur différentes cibles. Il y a jusqu'à 6 joueurs, il faut donc pouvoir identifier les différents signaux provenant des pistolets sur les photodiodes.
 On traitera ici de cette identification.
