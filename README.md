@@ -1,5 +1,5 @@
 # Projet CHTI GONZALVEZ / DECHAMBE
-Pour connaître l'avancer du projet en assembleur/C voir assembleur/readme.md
+Pour connaître l'avancée du projet en assembleur/C voir assembleur/readme.md
 
 Pour la partie 1 du Projet, voir PROJET.md
 ## Partie 1 : Prise en main de Matlab / Simulink
