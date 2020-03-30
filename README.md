@@ -1,5 +1,6 @@
 # Projet CHTI GONZALVEZ / DECHAMBE
-Pour la partie Projet, voir PROJET.md
+Pour connaître l'avancer du projet en assembleur/C voir assembleur/readme.md
+Pour la partie 1 du Projet, voir PROJET.md
 ## Partie 1 : Prise en main de Matlab / Simulink
 
 On va tracer plusieurs courbes avec les paramètres suivants :
