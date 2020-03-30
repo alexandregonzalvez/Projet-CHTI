@@ -1,0 +1,79 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 thumb
+    2 00000000                 AREA             code_m2k, code, READONLY
+    3 00000000                 export           m2k
+    4 00000000                 extern           somme_partie_reelle
+    5 00000000                 extern           somme_partie_imaginaire
+    6 00000000         
+    7 00000000         m2k     proc
+    8 00000000 F04F 0400       mov              r4, #0
+    9 00000004 F04F 0500       mov              r5, #0
+   10 00000008 4603            mov              r3, r0
+   11 0000000A F7FF BFFE       b                somme_partie_reelle
+   12 0000000E FBC0 4500       smlal            r4, r5, r0, r0
+   13 00000012 4618            mov              r0, r3
+   14 00000014 F7FF BFFE       b                somme_partie_imaginaire
+   15 00000018 FBE0 4500       umlal            r4, r5, r0, r0
+   16 0000001C 4628            mov              r0, r5
+   17 0000001E 4770            bx               lr
+   18 00000020                 endp
+   19 00000020                 end
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
+ork --depend=.\obj\m2k.d -o.\obj\m2k.o -I.\RTE\_Simu -IC:\Users\Mathieu\AppData
+\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include -IC:\Users\Mathieu\AppData\
+Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include --predefine="__EVAL SET
+A 1" --predefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSION SETA 529" -
+-predefine="_RTE_ SETA 1" --predefine="STM32F10X_MD SETA 1" --list=m2k.lst m2k.
+s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+code_m2k 00000000
+
+Symbol: code_m2k
+   Definitions
+      At line 2 in file m2k.s
+   Uses
+      None
+Comment: code_m2k unused
+m2k 00000000
+
+Symbol: m2k
+   Definitions
+      At line 7 in file m2k.s
+   Uses
+      At line 3 in file m2k.s
+Comment: m2k used once
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+External symbols
+
+somme_partie_imaginaire 00000000
+
+Symbol: somme_partie_imaginaire
+   Definitions
+      At line 5 in file m2k.s
+   Uses
+      At line 14 in file m2k.s
+Comment: somme_partie_imaginaire used once
+somme_partie_reelle 00000000
+
+Symbol: somme_partie_reelle
+   Definitions
+      At line 4 in file m2k.s
+   Uses
+      At line 11 in file m2k.s
+Comment: somme_partie_reelle used once
+2 symbols
+339 symbols in table

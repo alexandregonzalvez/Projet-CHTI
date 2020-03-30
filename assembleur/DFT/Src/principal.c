@@ -2,8 +2,13 @@
 
 float somme(int index);
 
+int m2k(int k, u16 * tabSig);
+
+extern u16 TabSig;
+
 int main(void)
 {
+	/*
 	float min = 10.0;
 	float max = 0.0;
 	
@@ -14,7 +19,10 @@ int main(void)
 		} else if (s < min) {
 			min = s;
 		}
-	}
+	}*/	
+	
+	m2k(1, &TabSig);
+	
 	
 	while	(1)
 		{
