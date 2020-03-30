@@ -5,16 +5,20 @@
 	extern somme_partie_imaginaire
 		
 m2k proc
-	mov r4, #0
-	mov r5, #0
-	mov r3, r0
-	b somme_partie_reelle
-	smlal r4, r5, r0, r0
-	mov r0, r3
-	b somme_partie_imaginaire
-	umlal r4, r5, r0, r0 
-	mov r0, r5
-	bx lr
+	push {lr}
+	
+	mov r8, #0
+	mov r9, #0
+	mov r10, r0
+	bl somme_partie_reelle
+	smlal r8, r9, r0, r0
+	mov r0, r10
+	bl somme_partie_imaginaire
+	smlal r8, r9, r0, r0 
+	mov r0, r9
+	
+	pop {pc}
+	
 	endp
 	end
 	

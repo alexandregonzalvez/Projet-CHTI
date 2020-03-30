@@ -3,8 +3,7 @@
 	extern TabCos
 	export somme_partie_reelle
 		
-somme_partie_reelle proc
-	
+somme_partie_reelle proc	
 	ldr r2, =TabCos
 
     mov r7, #0
@@ -17,7 +16,7 @@ db	mul r4, r0, r3
 	add r3, #1
 	cmp r3, #64
 	blt db
-	
+
 	mov r0, r7
 	
 	bx lr

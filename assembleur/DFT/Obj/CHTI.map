@@ -91,10 +91,10 @@ Image Symbol Table
     .text                                    0x0800014c   Section       36  init.o(.text)
     code_dft_partie_imaginaire               0x08000170   Section       48  dft_partie_imaginaire.o(code_dft_partie_imaginaire)
     code_dft_partie_reelle                   0x080001a0   Section       48  dft_partie_reelle.o(code_dft_partie_reelle)
-    code_m2k                                 0x080001d0   Section       32  m2k.o(code_m2k)
-    i.__scatterload_copy                     0x080001f0   Section       14  handlers.o(i.__scatterload_copy)
-    i.__scatterload_null                     0x080001fe   Section        2  handlers.o(i.__scatterload_null)
-    i.__scatterload_zeroinit                 0x08000200   Section       14  handlers.o(i.__scatterload_zeroinit)
+    code_m2k                                 0x080001d0   Section       34  m2k.o(code_m2k)
+    i.__scatterload_copy                     0x080001f2   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x08000200   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x08000202   Section       14  handlers.o(i.__scatterload_zeroinit)
     i.main                                   0x08000210   Section        0  principal.o(i.main)
     Signal                                   0x08000230   Section      128  table_signal.o(Signal)
     Trigo                                    0x080002b0   Section      256  table_trigo.o(Trigo)
@@ -104,7 +104,7 @@ Image Symbol Table
 
     Symbol Name                              Value     Ov Type        Size  Object(Section)
 
-    BuildAttributes$$THM_ISAv4$P$D$K$B$S$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    BuildAttributes$$THM_ISAv4$P$D$K$B$S$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$EBA8$MICROLIB$REQ8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
     __ARM_use_no_argv                        0x00000000   Number         0  principal.o ABSOLUTE
     __cpp_initialize__aeabi_                  - Undefined Weak Reference
     __cxa_finalize                            - Undefined Weak Reference
@@ -181,10 +181,10 @@ Image Symbol Table
     __scatterload_rt2                        0x0800014d   Thumb Code     0  init.o(.text)
     somme_partie_imaginaire                  0x08000171   Thumb Code    42  dft_partie_imaginaire.o(code_dft_partie_imaginaire)
     somme_partie_reelle                      0x080001a1   Thumb Code    42  dft_partie_reelle.o(code_dft_partie_reelle)
-    m2k                                      0x080001d1   Thumb Code    32  m2k.o(code_m2k)
-    __scatterload_copy                       0x080001f1   Thumb Code    14  handlers.o(i.__scatterload_copy)
-    __scatterload_null                       0x080001ff   Thumb Code     2  handlers.o(i.__scatterload_null)
-    __scatterload_zeroinit                   0x08000201   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    m2k                                      0x080001d1   Thumb Code    34  m2k.o(code_m2k)
+    __scatterload_copy                       0x080001f3   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x08000201   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x08000203   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
     main                                     0x08000211   Thumb Code    12  principal.o(i.main)
     Region$$Table$$Base                      0x08000220   Number         0  anon$$obj.o(Region$$Table)
     Region$$Table$$Limit                     0x08000230   Number         0  anon$$obj.o(Region$$Table)
@@ -221,11 +221,10 @@ Memory Map of the image
     0x0800014c   0x0800014c   0x00000024   Code   RO          100    .text               mc_w.l(init.o)
     0x08000170   0x08000170   0x00000030   Code   RO           68    code_dft_partie_imaginaire  dft_partie_imaginaire.o
     0x080001a0   0x080001a0   0x00000030   Code   RO           63    code_dft_partie_reelle  dft_partie_reelle.o
-    0x080001d0   0x080001d0   0x00000020   Code   RO           72    code_m2k            m2k.o
-    0x080001f0   0x080001f0   0x0000000e   Code   RO          104    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x080001fe   0x080001fe   0x00000002   Code   RO          105    i.__scatterload_null  mc_w.l(handlers.o)
-    0x08000200   0x08000200   0x0000000e   Code   RO          106    i.__scatterload_zeroinit  mc_w.l(handlers.o)
-    0x0800020e   0x0800020e   0x00000002   PAD
+    0x080001d0   0x080001d0   0x00000022   Code   RO           72    code_m2k            m2k.o
+    0x080001f2   0x080001f2   0x0000000e   Code   RO          104    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x08000200   0x08000200   0x00000002   Code   RO          105    i.__scatterload_null  mc_w.l(handlers.o)
+    0x08000202   0x08000202   0x0000000e   Code   RO          106    i.__scatterload_zeroinit  mc_w.l(handlers.o)
     0x08000210   0x08000210   0x00000010   Code   RO            4    i.main              principal.o
     0x08000220   0x08000220   0x00000010   Data   RO          102    Region$$Table       anon$$obj.o
     0x08000230   0x08000230   0x00000080   Data   RO           67    Signal              table_signal.o
@@ -248,14 +247,14 @@ Image component sizes
 
         48          6          0          0          0        364   dft_partie_imaginaire.o
         48          6          0          0          0        352   dft_partie_reelle.o
-        32          0          0          0          0        304   m2k.o
+        34          0          0          0          0        304   m2k.o
         16          4          0          0          0       1891   principal.o
         76         20        236          0       1024        808   startup-rvds.o
          0          0        128          0          0          0   table_signal.o
          0          0        256          0          0          0   table_trigo.o
 
     ----------------------------------------------------------------------
-       220         36        636          0       1024       3719   Object Totals
+       222         36        636          0       1024       3719   Object Totals
          0          0         16          0          0          0   (incl. Generated)
          0          0          0          0          0          0   (incl. Padding)
 
@@ -275,8 +274,8 @@ Image component sizes
         36          8          0          0          0         68   init.o
 
     ----------------------------------------------------------------------
-        88         16          0          0          0         68   Library Totals
-         2          0          0          0          0          0   (incl. Padding)
+        86         16          0          0          0         68   Library Totals
+         0          0          0          0          0          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -285,7 +284,7 @@ Image component sizes
         86         16          0          0          0         68   mc_w.l
 
     ----------------------------------------------------------------------
-        88         16          0          0          0         68   Library Totals
+        86         16          0          0          0         68   Library Totals
 
     ----------------------------------------------------------------------
 
