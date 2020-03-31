@@ -263,8 +263,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\dft_partie_imaginaire.s</PathWithFileName>
-      <FilenameWithoutPath>dft_partie_imaginaire.s</FilenameWithoutPath>
+      <PathWithFileName>.\dft_partie_reelle.s</PathWithFileName>
+      <FilenameWithoutPath>dft_partie_reelle.s</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -275,8 +275,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\dft_partie_reelle.s</PathWithFileName>
-      <FilenameWithoutPath>dft_partie_reelle.s</FilenameWithoutPath>
+      <PathWithFileName>.\table_signal.s</PathWithFileName>
+      <FilenameWithoutPath>table_signal.s</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -287,8 +287,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\m2k.s</PathWithFileName>
-      <FilenameWithoutPath>m2k.s</FilenameWithoutPath>
+      <PathWithFileName>.\dft_partie_imaginaire.s</PathWithFileName>
+      <FilenameWithoutPath>dft_partie_imaginaire.s</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -299,8 +299,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\table_signal.s</PathWithFileName>
-      <FilenameWithoutPath>table_signal.s</FilenameWithoutPath>
+      <PathWithFileName>.\m2k.s</PathWithFileName>
+      <FilenameWithoutPath>m2k.s</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
