@@ -397,26 +397,6 @@
               <FileType>2</FileType>
               <FilePath>.\somme.s</FilePath>
             </File>
-            <File>
-              <FileName>dft_partie_imaginaire.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\dft_partie_imaginaire.s</FilePath>
-            </File>
-            <File>
-              <FileName>dft_partie_reelle.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\dft_partie_reelle.s</FilePath>
-            </File>
-            <File>
-              <FileName>m2k.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\m2k.s</FilePath>
-            </File>
-            <File>
-              <FileName>table_signal.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\table_signal.s</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>
