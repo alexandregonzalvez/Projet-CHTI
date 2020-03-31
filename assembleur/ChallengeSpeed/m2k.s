@@ -6,16 +6,12 @@
 	
 m2k proc	
 	push {r12}
-	mov r8, #0
-	mov r9, #0
 
 ; dft partie reelle + im
 	ldr r2, =TabCos
 	ldr r11, =TabSin
 	
-    mov r7, #0
 	mov r3, #0
-	mov r12, #0
 	; r4 = ik2pi/N
 	; r3 = i
 db	mul r4, r0, r3

@@ -1,9 +1,7 @@
 --cpu Cortex-M3
 ".\obj\principal.o"
 ".\obj\table_trigo.o"
-".\obj\dft_partie_reelle.o"
 ".\obj\table_signal.o"
-".\obj\dft_partie_imaginaire.o"
 ".\obj\m2k.o"
 ".\obj\startup-rvds.o"
 "..\GASSP72\gassp72.lib"
