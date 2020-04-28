@@ -338,7 +338,7 @@
               <MiscControls>--C99</MiscControls>
               <Define>STM32F103xB,USE_FULL_LL_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\GASSP72</IncludePath>
+              <IncludePath>..\GFSSP72</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -418,9 +418,9 @@
           <GroupName>Drivers</GroupName>
           <Files>
             <File>
-              <FileName>gassp72.lib</FileName>
+              <FileName>gfssp72.lib</FileName>
               <FileType>4</FileType>
-              <FilePath>..\GASSP72\gassp72.lib</FilePath>
+              <FilePath>..\GFSSP72\gfssp72.lib</FilePath>
             </File>
           </Files>
         </Group>
