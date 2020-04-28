@@ -5,8 +5,8 @@
 * Challenge size : 74
 
 
-### Système de score ajouté (Obj 2):
-## Dossier : DFT_Systeme_Scores
+## Système de score ajouté (Obj 2):
+### Dossier : DFT_Systeme_Scores
 
 Pour vérifier :
 * Lancer le projet Keil situé dans le dossier : DFT_Systeme_Scores
