@@ -5,7 +5,7 @@
 	extern TabSin
 	
 m2k proc	
-	push {r12}
+	push {r4, r5, r6, r7, r8, r9, r11, r12}
 
 ; dft partie reelle + im
 	ldr r2, =TabCos
@@ -36,7 +36,7 @@ db	mul r4, r0, r3
 
 	mov r0, r9
 	
-	pop {r12}
+	pop {r4, r5, r6, r7, r8, r9, r11, r12}
 	
 	bx lr
 	

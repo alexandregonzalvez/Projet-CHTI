@@ -11,7 +11,8 @@ ARM Macro Assembler    Page 1
     5 00000000                 extern           TabSin
     6 00000000         
     7 00000000         m2k     proc
-    8 00000000 F84D CD04       push             {r12}
+    8 00000000 E92D 1BF0       push             {r4, r5, r6, r7, r8, r9, r11, r
+12}
     9 00000004         
    10 00000004         ; dft partie reelle + im
    11 00000004 4A0F            ldr              r2, =TabCos
@@ -43,7 +44,8 @@ ARM Macro Assembler    Page 1
    36 0000003A         
    37 0000003A 4648            mov              r0, r9
    38 0000003C         
-   39 0000003C F85D CB04       pop              {r12}
+   39 0000003C E8BD 1BF0       pop              {r4, r5, r6, r7, r8, r9, r11, r
+12}
    40 00000040         
    41 00000040 4770            bx               lr
    42 00000042         
