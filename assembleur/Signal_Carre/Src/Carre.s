@@ -5,7 +5,7 @@ GPIOB_BSRR	equ	0x40010C10	; Bit Set/Reset register
     	extern	current_value
     	export	timer_callback
     		
-timer_callback	proc	
+timer_callback	proc
 	ldr	r2, =current_value
 	ldr	r0, [r2]
 	ldr	r3, =GPIOB_BSRR

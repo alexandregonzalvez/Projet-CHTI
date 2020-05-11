@@ -19,7 +19,7 @@ ARM Macro Assembler    Page 1
     9 00000000 4A08            ldr              r2, =current_value
    10 00000002 6810            ldr              r0, [r2]
    11 00000004 4B08            ldr              r3, =GPIOB_BSRR
-   12 00000006 B930            cbnz             r0, zero
+   12 00000006 DE00            cbnz             r0, zero
    13 00000008         
    14 00000008         ; mise a 1 de PB1
    15 00000008 F04F 0102       mov              r1, #0x00000002
@@ -29,8 +29,7 @@ ARM Macro Assembler    Page 1
    19 00000014 4770            bx               lr
    20 00000016         
    21 00000016         ; mise a 0 de PB1
-   22 00000016 F44F 3100 
-                       zero    mov              r1, #0x00020000
+   22 00000016 F44F 3100       mov              r1, #0x00020000
    23 0000001A 6019            str              r1, [r3]
    24 0000001C F04F 0100       mov              r1, #0
    25 00000020 6011            str              r1,  [r2]
@@ -47,65 +46,3 @@ ata\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include --predefine="__EVAL
  SETA 1" --predefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSION SETA 52
 9" --predefine="_RTE_ SETA 1" --predefine="STM32F10X_MD SETA 1" --list=carre.ls
 t Src\Carre.s
-
-
-
-ARM Macro Assembler    Page 1 Alphabetic symbol ordering
-Relocatable symbols
-
-moncode 00000000
-
-Symbol: moncode
-   Definitions
-      At line 2 in file Src\Carre.s
-   Uses
-      None
-Comment: moncode unused
-timer_callback 00000000
-
-Symbol: timer_callback
-   Definitions
-      At line 8 in file Src\Carre.s
-   Uses
-      At line 6 in file Src\Carre.s
-Comment: timer_callback used once
-zero 00000016
-
-Symbol: zero
-   Definitions
-      At line 22 in file Src\Carre.s
-   Uses
-      At line 12 in file Src\Carre.s
-Comment: zero used once
-3 symbols
-
-
-
-ARM Macro Assembler    Page 1 Alphabetic symbol ordering
-Absolute symbols
-
-GPIOB_BSRR 40010C10
-
-Symbol: GPIOB_BSRR
-   Definitions
-      At line 4 in file Src\Carre.s
-   Uses
-      At line 11 in file Src\Carre.s
-Comment: GPIOB_BSRR used once
-1 symbol
-
-
-
-ARM Macro Assembler    Page 1 Alphabetic symbol ordering
-External symbols
-
-current_value 00000000
-
-Symbol: current_value
-   Definitions
-      At line 5 in file Src\Carre.s
-   Uses
-      At line 9 in file Src\Carre.s
-Comment: current_value used once
-1 symbol
-342 symbols in table
